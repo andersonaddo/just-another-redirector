@@ -1,0 +1,27 @@
+{
+    "manifest_version": 2,
+    "name": "Just Another Redirector",
+    "version": "1.0",
+    "description": "Down with automatic signup modals...",
+    "icons": {
+        "48": "boostrap-icon-signpost-2.svg",
+        "96": "boostrap-icon-signpost-2.svg"
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.twitter.com/*",
+                "*://*.reddit.com/*",
+                "*://*.youtube.com/*",
+                "*://*.instagram.com/*"
+            ],
+            "js": [
+                "utils.js",
+                "redirector.js"
+            ]
+        }
+    ]
+}
